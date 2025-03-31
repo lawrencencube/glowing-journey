@@ -18,4 +18,4 @@ jobs:
       run: sudo apt-get install unzip
 
     - name: Unzip file
-      run: unzip /ai-learning-playform.zip -d /
+      run: unzip ai-learning-playform.zip -d .
