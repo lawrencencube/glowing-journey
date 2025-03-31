@@ -1,4 +1,4 @@
-name: Unzip File
+name: Unzip and Update Repository
 
 on:
   push:
@@ -18,4 +18,15 @@ jobs:
       run: sudo apt-get install unzip
 
     - name: Unzip file
-      run: unzip ai-learning-platform.zip -d .
+      run: unzip ai-learning-platform.zip -d unzipped_content
+
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Commit and push changes
+      run: |
+        git add unzipped_content/*
+        git commit -m "Unzipped ai-learning-platform.zip and updated repository"
+        git push
