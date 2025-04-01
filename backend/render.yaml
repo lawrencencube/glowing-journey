@@ -1,0 +1,22 @@
+# Render Configuration for AI Learning Platform Backend
+
+# Build script
+build:
+  - npm install
+
+# Start command
+start:
+  - node server.js
+
+# Environment variables
+env:
+  - key: PORT
+    value: 3000
+  - key: NODE_ENV
+    value: production
+  - key: JWT_SECRET
+    sync: false
+  - key: DATABASE_URL
+    sync: false
+  - key: FRONTEND_URL
+    value: https://ai-learning-platform.netlify.app

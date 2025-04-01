@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AI Learning Platform</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex" id="auth-buttons">
+                    <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="d-none" id="user-profile">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle me-1"></i>
+                            <span id="username">User</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+                            <li><a class="dropdown-item" href="my-courses.html">My Courses</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="logout-button">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Master AI Skills with Expert Guidance</h1>
+            <p class="lead">Learn AI prompting, AI models, AI workflows, GPTs, and Python for AI through our comprehensive courses</p>
+            <div class="mt-4">
+                <a href="courses.html" class="btn btn-light btn-lg me-2">Explore Courses</a>
+                <a href="signup.html" class="btn btn-outline-light btn-lg">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Courses Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-heading">Featured Courses</h2>
+            <div class="row">
+                <!-- AI Boot Camp -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Boot Camp</h5>
+                            <p class="card-text">Accelerate your AI journey with our intensive boot camp program covering essential AI concepts and practical skills.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="badge bg-primary">4 weeks</span>
+                                <span class="text-muted">Beginner</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="ai-boot-camp.html" class="btn btn-outline-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Three-Month Course -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Three-Month AI Course</h5>
+                            <p class="card-text">Build foundational AI skills with our comprehensive three-month program designed for beginners.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="badge bg-primary">3 months</span>
+                                <span class="text-muted">Beginner to Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-outline-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Six-Month Course -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Six-Month AI Course</h5>
+                            <p class="card-text">Expand your AI expertise with our intermediate six-month program covering advanced concepts and applications.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="badge bg-primary">6 months</span>
+                                <span class="text-muted">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-outline-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="courses.html" class="btn btn-primary">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading text-center">Why Choose Our Platform</h2>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="bi bi-laptop fs-1 text-primary mb-3"></i>
+                        <h4>Expert-Led Curriculum</h4>
+                        <p>Our courses are designed by industry experts with years of experience in AI development and implementation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="bi bi-clock-history fs-1 text-primary mb-3"></i>
+                        <h4>Flexible Learning</h4>
+                        <p>Choose from various course durations to fit your schedule, from intensive boot camps to comprehensive long-term programs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="bi bi-code-square fs-1 text-primary mb-3"></i>
+                        <h4>Practical Skills</h4>
+                        <p>Gain hands-on experience with real-world projects and exercises that prepare you for actual AI implementation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-heading text-center">What Our Students Say</h2>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"The AI Boot Camp was exactly what I needed to jumpstart my career in AI. The instructors were knowledgeable and the content was perfectly structured."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Data Scientist</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"I completed the Six-Month AI Course and it transformed my understanding of AI models and workflows. I'm now confidently building AI solutions at work."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Michael Chen</h6>
+                                    <small class="text-muted">Software Engineer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"As someone with no prior programming experience, the Three-Month Course was perfect. The Python for AI module was especially helpful in building my foundation."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Emily Rodriguez</h6>
+                                    <small class="text-muted">Marketing Analyst</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-gradient text-white">
+        <div class="container text-center">
+            <h2>Ready to Start Your AI Journey?</h2>
+            <p class="lead">Join thousands of students who are mastering AI skills with our platform</p>
+            <a href="signup.html" class="btn btn-light btn-lg mt-3">Enroll Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>AI Learning Platform</h5>
+                    <p>Empowering the next generation of AI professionals through accessible, comprehensive education.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="courses.html" class="text-white">Courses</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Our Courses</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="ai-boot-camp.html" class="text-white">AI Boot Camp</a></li>
+                        <li><a href="#" class="text-white">Three-Month Course</a></li>
+                        <li><a href="#" class="text-white">Six-Month Course</a></li>
+                        <li><a href="#" class="text-white">One-Year Course</a></li>
+                        <li><a href="#" class="text-white">Two-Year Course</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope me-2"></i> info@ailearningplatform.com</li>
+                        <li><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> 123 AI Street, Tech City</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 AI Learning Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

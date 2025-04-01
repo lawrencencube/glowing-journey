@@ -1,0 +1,28 @@
+# Netlify Configuration File
+# This file configures how the site is built and deployed on Netlify
+
+[build]
+  # Directory to publish (the static site output)
+  publish = "frontend"
+  
+  # Default build command
+  command = "echo 'Static site deployment - no build required'"
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  
+# Headers to set on files
+[[headers]]
+  # Define headers for all files
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    
+# Environment variables
+[context.production.environment]
+  API_URL = "https://ai-learning-platform-api.onrender.com/api"

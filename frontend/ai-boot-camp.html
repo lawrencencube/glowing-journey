@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Boot Camp | AI Learning Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AI Learning Platform</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex" id="auth-buttons">
+                    <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="d-none" id="user-profile">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle me-1"></i>
+                            <span id="username">User</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+                            <li><a class="dropdown-item" href="my-courses.html">My Courses</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="logout-button">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Alert Container -->
+    <div id="alert-container" class="container mt-3"></div>
+
+    <!-- Hero Section / Header -->
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">AI Boot Camp</h1>
+            <p class="lead">Accelerate your AI journey with our intensive boot camp program</p>
+            <a href="#overview" class="btn btn-light btn-lg mt-3">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-5">
+        <div class="container">
+            <h2 class="section-heading">Overview</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="lead">The AI Boot Camp is an intensive, fast-paced program designed to quickly build your skills in artificial intelligence. This comprehensive program covers essential topics in AI prompting, AI models, AI workflows, GPTs, and Python for AI.</p>
+                    <p>Whether you're a complete beginner or have some programming experience, this boot camp will provide you with the foundational knowledge and practical skills needed to start working with AI technologies. Through a combination of theory and hands-on exercises, you'll learn how to leverage AI tools and techniques to solve real-world problems.</p>
+                    <div class="d-flex flex-wrap mt-4">
+                        <div class="me-4 mb-3">
+                            <h6><i class="bi bi-clock me-2"></i>Duration</h6>
+                            <p class="text-muted">4 weeks intensive</p>
+                        </div>
+                        <div class="me-4 mb-3">
+                            <h6><i class="bi bi-mortarboard me-2"></i>Skill Level</h6>
+                            <p class="text-muted">Beginner to Intermediate</p>
+                        </div>
+                        <div class="me-4 mb-3">
+                            <h6><i class="bi bi-laptop me-2"></i>Format</h6>
+                            <p class="text-muted">Online, Self-paced</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">What You'll Learn</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent">AI Prompting Techniques</li>
+                                <li class="list-group-item bg-transparent">AI Model Architectures</li>
+                                <li class="list-group-item bg-transparent">Effective AI Workflows</li>
+                                <li class="list-group-item bg-transparent">GPT Models and Applications</li>
+                                <li class="list-group-item bg-transparent">Python Programming for AI</li>
+                            </ul>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-primary w-100" id="enroll-button">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading">Course Lessons</h2>
+            <div class="row">
+                <!-- Lesson 1 -->
+                <div class="col-md-4">
+                    <div class="card lesson-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Lesson 1: Introduction to AI Prompting</h5>
+                            <p class="card-text">Learn how to craft effective prompts for AI systems. Discover the principles of prompt engineering and how to communicate with AI models to get the best results.</p>
+                            <ul class="list-unstyled mt-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Prompt engineering basics</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Context and specificity</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Iterative refinement</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-outline-primary lesson-button" data-lesson-id="1">Start Lesson</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lesson 2 -->
+                <div class="col-md-4">
+                    <div class="card lesson-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Lesson 2: Exploring AI Models</h5>
+                            <p class="card-text">Understand the basics of AI model architectures. Learn about different types of models, their capabilities, limitations, and appropriate use cases.</p>
+                            <ul class="list-unstyled mt-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Model architectures overview</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Transformer-based models</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Model selection criteria</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-outline-primary lesson-button" data-lesson-id="2">Start Lesson</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lesson 3 -->
+                <div class="col-md-4">
+                    <div class="card lesson-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Lesson 3: Python for AI Basics</h5>
+                            <p class="card-text">Get started with Python programming for AI applications. Learn essential Python concepts and libraries commonly used in AI development.</p>
+                            <ul class="list-unstyled mt-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Python fundamentals</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Working with NumPy and Pandas</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Introduction to AI libraries</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-outline-primary lesson-button" data-lesson-id="3">Start Lesson</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Curriculum -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-heading">Course Curriculum</h2>
+            <div class="accordion" id="curriculumAccordion">
+                <!-- Week 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Week 1: Foundations of AI
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Introduction to AI Concepts
+                                    <span class="badge bg-primary rounded-pill">45 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    History and Evolution of AI
+                                    <span class="badge bg-primary rounded-pill">30 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Python Setup and Environment
+                                    <span class="badge bg-primary rounded-pill">60 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Basic Python for AI
+                                    <span class="badge bg-primary rounded-pill">90 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Week 1 Project: Setting Up Your AI Workspace
+                                    <span class="badge bg-success rounded-pill">Hands-on</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Week 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Week 2: AI Prompting and Models
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Introduction to AI Prompting
+                                    <span class="badge bg-primary rounded-pill">60 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Prompt Engineering Techniques
+                                    <span class="badge bg-primary rounded-pill">75 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    AI Model Architectures
+                                    <span class="badge bg-primary rounded-pill">90 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Working with Pre-trained Models
+                                    <span class="badge bg-primary rounded-pill">60 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Week 2 Project: Creating Effective Prompts
+                                    <span class="badge bg-success rounded-pill">Hands-on</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Week 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Week 3: AI Workflows and GPTs
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Designing AI Workflows
+                                    <span class="badge bg-primary rounded-pill">60 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Integrating AI into Applications
+                                    <span class="badge bg-primary rounded-pill">75 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Introduction to GPT Models
+                                    <span class="badge bg-primary rounded-pill">90 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Building with GPT APIs
+                                    <span class="badge bg-primary rounded-pill">120 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Week 3 Project: Creating a Simple AI Assistant
+                                    <span class="badge bg-success rounded-pill">Hands-on</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Week 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Week 4: Python for AI and Final Project
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Advanced Python for AI
+                                    <span class="badge bg-primary rounded-pill">90 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Working with AI Libraries
+                                    <span class="badge bg-primary rounded-pill">120 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Data Processing for AI
+                                    <span class="badge bg-primary rounded-pill">75 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Final Project Workshop
+                                    <span class="badge bg-primary rounded-pill">180 min</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Boot Camp Final Project: Building an AI-Powered Application
+                                    <span class="badge bg-success rounded-pill">Hands-on</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading">Meet Your Instructor</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <div class="rounded-circle overflow-hidden mx-auto mb-3" style="width: 200px; height: 200px; background-color: #ddd;">
+                            <i class="bi bi-person-fill" style="font-size: 8rem; line-height: 200px;"></i>
+                        </div>
+                        <h4>Dr. Alex Johnson</h4>
+                        <p class="text-muted">AI Research Scientist</p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>Dr. Alex Johnson is a leading AI researcher with over 10 years of experience in the field. They hold a Ph.D. in Computer Science with a specialization in Machine Learning from Stanford University and have published numerous papers on AI models and applications.</p>
+                    <p>Prior to teaching, Dr. Johnson worked at major tech companies developing AI solutions for real-world problems. Their practical experience combined with academic expertise makes them an ideal instructor for this boot camp.</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="btn btn-outline-primary me-2">View Profile</a>
+                        <a href="#" class="btn btn-outline-secondary">
+                            <i class="bi bi-linkedin me-1"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Courses Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-heading">Other Course Offerings</h2>
+            <p class="lead mb-4">Looking for a more comprehensive learning experience? Explore our extended course options designed to build your AI expertise at your own pace.</p>
+            
+            <div class="row">
+                <!-- Three-Month Course -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card course-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Three-Month Course</h5>
+                            <p class="card-text">Build foundational AI skills with our comprehensive three-month program. Perfect for beginners who want to establish a solid understanding of AI concepts and applications.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Six-Month Course -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card course-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Six-Month Course</h5>
+                            <p class="card-text">Expand your AI expertise with our intermediate six-month program. Dive deeper into AI technologies and develop more advanced skills for practical applications.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- One-Year Course -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card course-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">One-Year Course</h5>
+                            <p class="card-text">Master AI concepts and applications with our comprehensive one-year program. Develop professional-level skills through in-depth study and practical projects.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Two-Year Course -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card course-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Two-Year Course</h5>
+                            <p class="card-text">Become an AI professional with our in-depth two-year training program. Develop expertise across all aspects of AI development and implementation.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading text-center">What Our Students Say</h2>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"The AI Boot Camp was exactly what I needed to jumpstart my career in AI. The curriculum was well-structured and the hands-on projects were incredibly valuable."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">David Kim</h6>
+                                    <small class="text-muted">Software Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"As someone with no prior AI experience, I found the boot camp challenging but extremely rewarding. The instructor was excellent at explaining complex concepts."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Lisa Chen</h6>
+                                    <small class="text-muted">Data Analyst</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"The Python for AI module was particularly helpful. I went from basic Python knowledge to confidently working with AI libraries in just a few weeks."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">James Wilson</h6>
+                                    <small class="text-muted">Web Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-gradient text-white">
+        <div class="container text-center">
+            <h2>Ready to Start Your AI Journey?</h2>
+            <p class="lead">Join our AI Boot Camp today and take the first step toward mastering artificial intelligence.</p>
+            <a href="#" class="btn btn-light btn-lg mt-3" id="cta-enroll-button">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-heading text-center">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion mt-4" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    Do I need prior programming experience?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    While some basic programming knowledge is helpful, the boot camp is designed to accommodate beginners. We start with Python fundamentals and gradually build up to more complex concepts. If you're completely new to programming, we recommend reviewing some basic Python tutorials before starting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    What is the time commitment for the boot camp?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The boot camp is designed to be completed in 4 weeks, with approximately 15-20 hours of commitment per week. This includes video lessons, readings, hands-on exercises, and project work. The content is self-paced, so you can adjust your schedule as needed.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    Will I receive a certificate upon completion?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, upon successful completion of the boot camp, including all assignments and the final project, you will receive a certificate of completion. This certificate can be added to your resume and LinkedIn profile to showcase your AI skills.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                    What kind of support is available during the boot camp?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Throughout the boot camp, you'll have access to a dedicated discussion forum where you can ask questions and interact with instructors and fellow students. We also offer weekly live Q&A sessions and office hours with the instructor.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                    What hardware/software requirements are there?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You'll need a computer with internet access and a modern web browser. For the programming portions, we recommend at least 8GB of RAM. All software used in the course is free and open-source. Detailed setup instructions are provided in the first module.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>AI Learning Platform</h5>
+                    <p>Empowering the next generation of AI professionals through accessible, comprehensive education.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="courses.html" class="text-white">Courses</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Our Courses</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="ai-boot-camp.html" class="text-white">AI Boot Camp</a></li>
+                        <li><a href="#" class="text-white">Three-Month Course</a></li>
+                        <li><a href="#" class="text-white">Six-Month Course</a></li>
+                        <li><a href="#" class="text-white">One-Year Course</a></li>
+                        <li><a href="#" class="text-white">Two-Year Course</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope me-2"></i> info@ailearningplatform.com</li>
+                        <li><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> 123 AI Street, Tech City</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 AI Learning Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Course-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle enrollment button clicks
+            const enrollButtons = document.querySelectorAll('#enroll-button, #cta-enroll-button');
+            enrollButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Check if user is logged in
+                    const token = localStorage.getItem('token');
+                    if (!token) {
+                        // Redirect to login page with return URL
+                        window.location.href = `login.html?redirect=${encodeURIComponent('ai-boot-camp.html')}`;
+                        return;
+                    }
+                    
+                    // Handle enrollment logic here
+                    // This would typically involve an API call to enroll the user in the course
+                    showAlert('Enrollment functionality will be implemented in the next phase.', 'info');
+                });
+            });
+            
+            // Handle lesson button clicks
+            const lessonButtons = document.querySelectorAll('.lesson-button');
+            lessonButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const lessonId = this.getAttribute('data-lesson-id');
+                    
+                    // Check if user is logged in
+                    const token = localStorage.getItem('token');
+                    if (!token) {
+                        // Redirect to login page with return URL
+                        window.location.href = `login.html?redirect=${encodeURIComponent('ai-boot-camp.html')}`;
+                        return;
+                    }
+                    
+                    // Handle lesson access logic here
+                    // This would typically involve checking if the user is enrolled and redirecting to the lesson content
+                    showAlert(`Lesson ${lessonId} content will be available in the next phase.`, 'info');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
